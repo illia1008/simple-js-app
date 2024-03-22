@@ -1,0 +1,16 @@
+body {
+    background-color: #cce6ff;
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.5;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
+
+h1 {
+    font-size: 70px;
+  }
