@@ -30,13 +30,51 @@ let pockemonList = [
 let heightLimit = 0.65;
 
 // Create loop to check every element of the array
-for (let i = 0; i < pockemonList.length; i++) {
-    if (pockemonList[i].height > heightLimit) {
-        document.write(pockemonList[i].name + ' (height:' + pockemonList[i].height +
+// for (let i = 0; i < pockemonList.length; i++) {
+//     if (pockemonList[i].height > heightLimit) {
+//         document.write(pockemonList[i].name + ' (height:' + pockemonList[i].height +
+//             ');' + ' - Wow, that\'s big!' + '<br>');
+//     }
+//     else {
+//         document.write(pockemonList[i].name + ' (height:' + pockemonList[i].height +
+//             ');' + '<br>');
+//     }
+//
+
+// forEach loop method1
+pockemonList.forEach(pockemon);
+
+function pockemon(element) {
+    if (element.height > heightLimit) {
+        document.write(element.name + ' (height:' + element.height +
             ');' + ' - Wow, that\'s big!' + '<br>');
     }
     else {
-        document.write(pockemonList[i].name + ' (height:' + pockemonList[i].height +
+        document.write(element.name + ' (height:' + element.height +
             ');' + '<br>');
     }
 }
+
+// forEach loop method2
+// pockemonList.forEach(function(element) {
+//     if (element.height > heightLimit) {
+//         document.write(element.name + ' (height:' + element.height +
+//             ');' + ' - Wow, that\'s big!' + '<br>');
+//     }
+//     else {
+//         document.write(element.name + ' (height:' + element.height +
+//             ');' + '<br>');
+//     }
+// });
+
+// forEach loop method3
+// pockemonList.forEach(element => {
+//     if (element.height > heightLimit) {
+//         document.write(element.name + ' (height:' + element.height +
+//             ');' + ' - Wow, that\'s big!' + '<br>');
+//     }
+//     else {
+//         document.write(element.name + ' (height:' + element.height +
+//             ');' + '<br>');
+//     }
+// });
