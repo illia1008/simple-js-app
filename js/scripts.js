@@ -31,7 +31,22 @@ let pokemonRepository = (function () {
     }
 
     function add(pokemon) {
-        pokemonList.push(pokemon);
+
+        if (!Object.keys(pokemon).every(property => ['name', 'height', 'weight', 'type'].includes(property))) {
+            document.write('Pokemon property is wrong' + '<br>');        
+        
+        } else if (typeof pokemon.name !== 'string') {
+            document.write('Pokemon name "' + pokemon.name + '" is wrong' + '<br>');
+        } else if (typeof pokemon.height !== 'number') {
+            document.write('Pokemon height "' + pokemon.height + '" is wrong' + '<br>');
+        } else if (typeof pokemon.weight !== 'number') {
+            document.write('Pokemon weight "' + pokemon.weight + '" is wrong' + '<br>');
+        } else if (typeof pokemon.type !== 'string' ) {
+            document.write('Pokemon type "' + pokemon.type + '" is wrong' + '<br>');
+        } else {
+            pokemonList.push(pokemon);
+        }
+
     }
 
     return {
@@ -42,12 +57,14 @@ let pokemonRepository = (function () {
 
 console.log(pokemonRepository.getAll());
 
+
+
 pokemonRepository.add(
     {
         name: 'Eevee',
         height: 0.3,
         weight: 6.5,
-        type: ['normal']
+        type: 'normal'
     })
 
 console.log(pokemonRepository.getAll());
