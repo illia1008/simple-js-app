@@ -30,3 +30,19 @@ h1 {
     height: 100px;
     margin: 50px;
 }
+
+.buttonPokemon {
+    font-family: inherit;
+    font-size: 32px;
+    background-color: rgb(109, 241, 109);
+    border: 2px solid rgb(185, 15, 71);
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+.buttonPokemon:hover,
+.buttonPokemon:focus {
+    cursor: pointer;
+    opacity:0.7;
+}
