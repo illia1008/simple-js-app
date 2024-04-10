@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
     let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=4';
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
     function add(pokemon) {
         if (
@@ -44,6 +44,7 @@ let pokemonRepository = (function () {
               detailsUrl: item.url
             };
             add(pokemon);
+            console.log ( pokemon );
           });
         }).catch(function (e) {
           console.error(e);
