@@ -1,1 +1,1 @@
-This code determines which Pokemon satisfies "Big Pokemon" criteria.
+Pokedex page provides a list of Pokemons. You can learn more about them by clicking the button.
