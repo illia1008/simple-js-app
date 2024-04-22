@@ -75,7 +75,7 @@ h1 {
     -webkit-appearance: none;
     border: 0;
     background: none;
-    color: white;
+    color: black;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -90,7 +90,7 @@ h1 {
 
 .imagePokemon {
     height: auto;
-    width: 40%;
+    width: 25%;
 }
 
 .buttonContainer {

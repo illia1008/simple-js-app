@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
     let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=5';
 
     function add(pokemon) {
         if (
@@ -58,8 +58,10 @@ let pokemonRepository = (function () {
         return fetch(url).then(function (response) {
             return response.json();
         }).then(function (details) {
-            item.imageUrl = details.sprites.front_default;
+            item.imageFrontUrl = details.sprites.front_default;
+            item.imageBackUrl = details.sprites.back_default;
             item.height = details.height;
+            item.weight = details.weight;
             item.types = details.types;
         }).catch(function (e) {
             console.error(e);
@@ -68,11 +70,12 @@ let pokemonRepository = (function () {
 
     function showDetails(item) {
         loadDetails(item).then(function () {
-            showModal(item.name, item.height, item.imageUrl);
+            showModal(item.name, item.height, item.weight, item.imageFrontUrl,
+                item.imageBackUrl);
         });
     }
 
-    function showModal(name, height, img) {
+    function showModal(name, height, weight, imgFront, imgBack) {
         let modalContainer = document.querySelector('#modal-container');
         modalContainer.innerHTML = '';
         let modal = document.createElement('div');
@@ -103,14 +106,23 @@ let pokemonRepository = (function () {
         let heightElement = document.createElement('p');
         heightElement.innerText = 'Pokemon height is ' + height;
 
-        let imageElement = document.createElement('img');
-        imageElement.src = img;
-        imageElement.classList.add('imagePokemon');
+        let weightElement = document.createElement('p');
+        weightElement.innerText = 'Pokemon weight is ' + weight;
+
+        let imageElementFront = document.createElement('img');
+        imageElementFront.src = imgFront;
+        imageElementFront.classList.add('imagePokemon');
+
+        let imageElementBack = document.createElement('img');
+        imageElementBack.src = imgBack;
+        imageElementBack.classList.add('imagePokemon');
 
         modal.appendChild(closeButtonElement);
         modal.appendChild(nameElement);
         modal.appendChild(heightElement);
-        modal.appendChild(imageElement);
+        modal.appendChild(weightElement);
+        modal.appendChild(imageElementFront);
+        modal.appendChild(imageElementBack);
         modalContainer.appendChild(modal);
 
         modalContainer.classList.add('is-visible');
