@@ -4,11 +4,11 @@ let pokemonRepository = (function () {
 
     function add(pokemon) {
         if (
-            typeof pokemon === "object" && "name" in pokemon
+            typeof pokemon === 'object' && 'name' in pokemon
         ) {
             pokemonList.push(pokemon);
         } else {
-            console.log("pokemon is not correct");
+            console.log('pokemon is not correct');
         }
     }
 
@@ -32,7 +32,7 @@ let pokemonRepository = (function () {
     }
 
     function addEventListener(button, pokemon) {
-        button.addEventListener('click', function (event) {
+        button.addEventListener('click', function() {
             showDetails(pokemon);
         })
     }

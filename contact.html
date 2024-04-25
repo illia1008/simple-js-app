@@ -11,16 +11,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="dist/styles.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body class="body">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-        <a href="#" class="navbar-brand" style="font-size: 3.5rem;">
+        <a href="index.html" class="navbar-brand" style="font-size: 3.5rem;">
             <img src="img/pokemons.jpg" width="100" height="100" class="d-inline-block align-top"
-                alt="Pokedex logo">Pokedex
+                alt="Pokedex logo"> Pokedex
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBarTarget"
@@ -40,52 +40,54 @@
         </div>
 
     </nav>
-    
+
     <br>
 
-    <div class="profile">
-        <!-- Add your Portrait image here -->
-        <img src="img/illia-kvan.png" class="profile__portrait" alt="Illia Kvan Portrait" height="200px"><br><br>
-        Illia Kvan<br>
-        138 Montrose Avenue<br>
-        Bryn Mawr, 19010<br><br>
-        Tel: <a href="tel:+1 484-478-4841">+1 484-478-4841</a><br>
-        E-mail: <a href="mailto:kwanilya@gmail.com">kwanilya@gmail.com</a><br><br>
-        <a href="mailto:kwanilya@gmail.com">Contact me</a>
-    </div>
-
-    <footer class="page-footer">
-        <p>Find me on</p>
-        <div class="social-media">
-            <!-- Github logo -->
-            <img src="img/github.svg" alt="Github">
-            <!-- Twitter logo -->
-            <img src="img/twitter.svg" alt="Twitter">
-            <!-- LinkedIn logo -->
-            <img src="img/linkedIn.svg" alt="LinkedIn">
+    <div class="contacts">
+        <div>
+            <!-- Add your Portrait image here -->
+            <img src="img/illia-kvan.png" class="profile__portrait" alt="Illia Kvan Portrait" height="200px"><br><br>
+            Illia Kvan<br>
+            138 Montrose Avenue<br>
+            Bryn Mawr, 19010<br><br>
+            Tel: <a href="tel:+1 484-478-4841">+1 484-478-4841</a><br>
+            E-mail: <a href="mailto:kwanilya@gmail.com">kwanilya@gmail.com</a><br><br>
+            <a href="mailto:kwanilya@gmail.com">Contact me</a>
         </div>
-    </footer>
 
-    <br><br>
-
-    <p>User contact information:</p>
-
-    <form action="" method="post" class="user-contact">
-        <label class="standard-label" for="contact-email">Email: </label>
-        <input type="email" id="contact-email" required>
-
-        <br><br>
-
-        <label class="standard-label" for="contact-tel">Telephone: </label>
-        <input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+        <footer>
+            <p>Find me on</p>
+            <div>
+                <!-- Github logo -->
+                <img src="img/github.svg" alt="Github">
+                <!-- Twitter logo -->
+                <img src="img/twitter.svg" alt="Twitter">
+                <!-- LinkedIn logo -->
+                <img src="img/linkedIn.svg" alt="LinkedIn">
+            </div>
+        </footer>
 
         <br><br>
 
-        <label>Message:</label>
-        <textarea maxlength="240" required></textarea>
+        <p>User contact information:</p>
 
-        <input type="submit" value="Send message">
-    </form>
+        <form action="" method="post" class="user-contact">
+            <label for="contact-email">Email: </label>
+            <input type="email" id="contact-email" required>
+
+            <br><br>
+
+            <label for="contact-tel">Telephone: </label>
+            <input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+
+            <br><br>
+
+            <label>Message:</label>
+            <textarea maxlength="240" required></textarea>
+
+            <input type="submit" value="Send message">
+        </form>
+    </div>
 
     <script src="js/tota11y.min.js"></script>
 </body>
